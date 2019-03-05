@@ -460,11 +460,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 480);
+            this.Controls.Add(this.pnl_Header);
             this.Controls.Add(this.pnl_calc);
             this.Controls.Add(this.btn_calc);
             this.Controls.Add(this.btn_info);
             this.Controls.Add(this.pnl_info);
-            this.Controls.Add(this.pnl_Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(780, 480);

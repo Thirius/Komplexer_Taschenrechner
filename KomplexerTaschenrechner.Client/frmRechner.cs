@@ -89,6 +89,7 @@ namespace KomplexerTaschenrechner.Client
 
         private void btn_info_Click(object sender, EventArgs e)
         {
+            btn_calc.Text = "Berechnung";
             if (pnl_info.Visible)
                 return;
 
@@ -112,8 +113,14 @@ namespace KomplexerTaschenrechner.Client
         private void btn_calc_Click(object sender, EventArgs e)
         {
             if (pnl_calc.Visible)
+            {
+                txt_number1.Text = lbl_result.Text;
+                txt_number2.Text = "";
+                lbl_result.Text = "";
                 return;
+            }
 
+            btn_calc.Text = "Weiter";
             pnl_info.Visible = false;
 
             if (txt_complex.Text != "")
@@ -148,8 +155,12 @@ namespace KomplexerTaschenrechner.Client
             ComplexNumber C1 = ComplexNumber.Input(txt_number1.Text);
             ComplexNumber C2 = ComplexNumber.Input(txt_number2.Text);
 
+            
             lbl_result.Text = ComplexCalc.Multiply(C1, C2)?.Cartesian();
-            if(lbl_result.Text == "")
+
+            if ((C1?.Real == 0 && C1?.Imag == 0) || (C2?.Real == 0 && C2?.Imag == 0))
+                MessageBox.Show("Multiplikation nicht möglich");
+            else if (lbl_result.Text == "")
                 MessageBox.Show("Fehler bei der Eingabe");
         }
 
@@ -159,7 +170,10 @@ namespace KomplexerTaschenrechner.Client
             ComplexNumber C2 = ComplexNumber.Input(txt_number2.Text);
 
             lbl_result.Text = ComplexCalc.Divide(C1, C2)?.Cartesian();
-            if (lbl_result.Text == "")
+
+            if ((C1?.Real == 0 && C1?.Imag == 0) || (C2?.Real == 0 && C2?.Imag == 0))
+                MessageBox.Show("Division nicht möglich");
+            else if (lbl_result.Text == "")
                 MessageBox.Show("Fehler bei der Eingabe");
         }
     }
