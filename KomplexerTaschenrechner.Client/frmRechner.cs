@@ -104,6 +104,9 @@ namespace KomplexerTaschenrechner.Client
             else if (txt_number2.Text != "")
                 txt_complex.Text = txt_number2.Text;
 
+            txt_number1.Text = "";
+            txt_number2.Text = "";
+            lbl_result.Text = "";
             pnl_info.Visible = true;
         }
 
@@ -117,7 +120,48 @@ namespace KomplexerTaschenrechner.Client
             if (txt_complex.Text != "")
                 txt_number1.Text = txt_complex.Text;
 
+            txt_complex.Text = "";
             pnl_calc.Visible = true;
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            ComplexNumber C1 = ComplexNumber.Input(txt_number1.Text);
+            ComplexNumber C2 = ComplexNumber.Input(txt_number2.Text);
+            
+            lbl_result.Text = ComplexCalc.Add(C1, C2)?.Cartesian();
+            if (lbl_result.Text == "")
+                MessageBox.Show("Fehler bei der Eingabe");
+        }
+
+        private void btn_subtract_Click(object sender, EventArgs e)
+        {
+            ComplexNumber C1 = ComplexNumber.Input(txt_number1.Text);
+            ComplexNumber C2 = ComplexNumber.Input(txt_number2.Text);
+
+            lbl_result.Text = ComplexCalc.Subtract(C1, C2)?.Cartesian();
+            if (lbl_result.Text == "")
+                MessageBox.Show("Fehler bei der Eingabe");
+        }
+
+        private void btn_multiply_Click(object sender, EventArgs e)
+        {
+            ComplexNumber C1 = ComplexNumber.Input(txt_number1.Text);
+            ComplexNumber C2 = ComplexNumber.Input(txt_number2.Text);
+
+            lbl_result.Text = ComplexCalc.Multiply(C1, C2)?.Cartesian();
+            if(lbl_result.Text == "")
+                MessageBox.Show("Fehler bei der Eingabe");
+        }
+
+        private void btn_divide_Click(object sender, EventArgs e)
+        {
+            ComplexNumber C1 = ComplexNumber.Input(txt_number1.Text);
+            ComplexNumber C2 = ComplexNumber.Input(txt_number2.Text);
+
+            lbl_result.Text = ComplexCalc.Divide(C1, C2)?.Cartesian();
+            if (lbl_result.Text == "")
+                MessageBox.Show("Fehler bei der Eingabe");
         }
     }
 }

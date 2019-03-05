@@ -2,44 +2,45 @@
 
 namespace KomplexerTaschenrechner
 {
-    class ComplexCalc
+    public class ComplexCalc
     {
-        public ComplexNumber Add(ComplexNumber C1, ComplexNumber C2)
+        static public ComplexNumber Add(ComplexNumber C1, ComplexNumber C2)
         {
             if (C1 == null || C2 == null)
                 return null;
+
             ComplexNumber result = new ComplexNumber();
-            result.Real = C1.Real + C2.Real;
-            result.Imag = C1.Imag + C2.Imag;
+            result.Real = Math.Round(C1.Real + C2.Real,3);
+            result.Imag = Math.Round(C1.Imag + C2.Imag,3);
             return ComplexNumber.Input(result.Cartesian());
         }
-        public ComplexNumber Subtract(ComplexNumber C1, ComplexNumber C2)
+        static public ComplexNumber Subtract(ComplexNumber C1, ComplexNumber C2)
         {
             if (C1 == null || C2 == null)
                 return null;
             ComplexNumber result = new ComplexNumber();
-            result.Real = C1.Real - C2.Real;
-            result.Imag = C1.Imag - C2.Imag;
+            result.Real = Math.Round(C1.Real - C2.Real,3);
+            result.Imag = Math.Round(C1.Imag - C2.Imag,3);
             return ComplexNumber.Input(result.Cartesian());
         }
 
-        public ComplexNumber Multiply(ComplexNumber C1, ComplexNumber C2)
+        static public ComplexNumber Multiply(ComplexNumber C1, ComplexNumber C2)
         {
             if (C1 == null || C2 == null)
                 return null;
             ComplexNumber result = new ComplexNumber();
-            result.Real = C1.Real * C2.Real + C1.Imag * C2.Imag;
-            result.Imag = C1.Imag * C2.Real + C2.Imag * C1.Real;
-            return ComplexNumber.Input(result.Cartesian());
+            result.Phi = C1.Phi + C2.Phi;
+            result.Absolute = C1.Absolute * C2.Absolute;
+            return ComplexNumber.Input(result.Expo());
         }
 
-        public ComplexNumber Divide(ComplexNumber C1, ComplexNumber C2)
+        static public ComplexNumber Divide(ComplexNumber C1, ComplexNumber C2)
         {
             if (C1 == null || C2 == null)
                 return null;
             ComplexNumber result = new ComplexNumber();
-            result.Real = (C1.Real * C2.Real + C1.Imag * C2.Imag) / (Math.Pow(C2.Real, 2) + Math.Pow(C2.Imag, 2));
-            result.Imag = (C1.Imag * C2.Real - C1.Real * C2.Imag) / (Math.Pow(C2.Real, 2) + Math.Pow(C2.Imag, 2));
+            result.Real = Math.Round((C1.Real * C2.Real + C1.Imag * C2.Imag) / (Math.Pow(C2.Real, 2) + Math.Pow(C2.Imag, 2)),3);
+            result.Imag = Math.Round(((C1.Imag * C2.Real) - (C1.Real * C2.Imag)) / (Math.Pow(C2.Real, 2) + Math.Pow(C2.Imag, 2)),3);
             return ComplexNumber.Input(result.Cartesian());
         }
 
