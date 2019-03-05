@@ -54,6 +54,14 @@ namespace KomplexerTaschenrechner
             return Real + "+" + Imag + "i";
         }
 
+        public string Conjugate()
+        {
+            if (Imag < 0)
+                return Real + "+" + Math.Abs(Imag) + "i";
+
+            return Real + "-" + Imag + "i";
+        }
+
         public string Polar()
         {
             return Absolute + "*(cos(" + Phi + ")+sin(" + Phi + ")i)";

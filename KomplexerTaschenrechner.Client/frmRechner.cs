@@ -70,8 +70,15 @@ namespace KomplexerTaschenrechner.Client
                 lbl_cartesian.Text = "";
                 lbl_exponential.Text = "";
                 lbl_polar.Text = "";
+                lbl_phi.Text = "";
+                lbl_absolute.Text = "";
+                lbl_conjugate.Text = "";
                 return;
             }
+
+            lbl_phi.Text = cN.Phi.ToString();
+            lbl_absolute.Text = cN.Absolute.ToString();
+            lbl_conjugate.Text = cN.Conjugate();
             lbl_cartesian.Text = cN.Cartesian();
             lbl_exponential.Text = cN.Expo();
             lbl_polar.Text = cN.Polar();

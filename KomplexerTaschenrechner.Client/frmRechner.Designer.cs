@@ -41,8 +41,16 @@
             this.lbl_cartesian = new System.Windows.Forms.Label();
             this.lbl_polar = new System.Windows.Forms.Label();
             this.lbl_exponential = new System.Windows.Forms.Label();
+            this.lbl_absolute = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_phi = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_conjugate = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pnl_info = new System.Windows.Forms.Panel();
             this.pnl_Header.SuspendLayout();
             this.pnl_btnsHeader.SuspendLayout();
+            this.pnl_info.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Header
@@ -52,10 +60,10 @@
             this.pnl_Header.Controls.Add(this.pnl_btnsHeader);
             this.pnl_Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Header.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Header.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl_Header.MinimumSize = new System.Drawing.Size(588, 42);
+            this.pnl_Header.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnl_Header.MinimumSize = new System.Drawing.Size(662, 52);
             this.pnl_Header.Name = "pnl_Header";
-            this.pnl_Header.Size = new System.Drawing.Size(693, 42);
+            this.pnl_Header.Size = new System.Drawing.Size(780, 52);
             this.pnl_Header.TabIndex = 0;
             this.pnl_Header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownEvent);
             // 
@@ -63,10 +71,10 @@
             // 
             this.lbl_Title.AutoSize = true;
             this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Title.Location = new System.Drawing.Point(4, 4);
+            this.lbl_Title.Location = new System.Drawing.Point(4, 5);
             this.lbl_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(117, 31);
+            this.lbl_Title.Size = new System.Drawing.Size(136, 37);
             this.lbl_Title.TabIndex = 1;
             this.lbl_Title.Text = "Rechner";
             this.lbl_Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownEvent);
@@ -76,10 +84,10 @@
             this.pnl_btnsHeader.Controls.Add(this.btn_Min);
             this.pnl_btnsHeader.Controls.Add(this.Btn_Close);
             this.pnl_btnsHeader.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnl_btnsHeader.Location = new System.Drawing.Point(608, 0);
-            this.pnl_btnsHeader.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_btnsHeader.Location = new System.Drawing.Point(684, 0);
+            this.pnl_btnsHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_btnsHeader.Name = "pnl_btnsHeader";
-            this.pnl_btnsHeader.Size = new System.Drawing.Size(85, 42);
+            this.pnl_btnsHeader.Size = new System.Drawing.Size(96, 52);
             this.pnl_btnsHeader.TabIndex = 0;
             // 
             // btn_Min
@@ -89,9 +97,9 @@
             this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Min.Location = new System.Drawing.Point(0, 0);
-            this.btn_Min.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Min.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Min.Name = "btn_Min";
-            this.btn_Min.Size = new System.Drawing.Size(45, 42);
+            this.btn_Min.Size = new System.Drawing.Size(51, 52);
             this.btn_Min.TabIndex = 1;
             this.btn_Min.Text = "_";
             this.btn_Min.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -104,10 +112,10 @@
             this.Btn_Close.FlatAppearance.BorderSize = 0;
             this.Btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Close.Location = new System.Drawing.Point(45, 0);
-            this.Btn_Close.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Close.Location = new System.Drawing.Point(51, 0);
+            this.Btn_Close.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Btn_Close.Name = "Btn_Close";
-            this.Btn_Close.Size = new System.Drawing.Size(40, 42);
+            this.Btn_Close.Size = new System.Drawing.Size(45, 52);
             this.Btn_Close.TabIndex = 0;
             this.Btn_Close.Text = "X";
             this.Btn_Close.UseVisualStyleBackColor = true;
@@ -116,10 +124,10 @@
             // txt_complex
             // 
             this.txt_complex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_complex.Location = new System.Drawing.Point(73, 72);
-            this.txt_complex.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_complex.Location = new System.Drawing.Point(70, 90);
+            this.txt_complex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_complex.Name = "txt_complex";
-            this.txt_complex.Size = new System.Drawing.Size(604, 30);
+            this.txt_complex.Size = new System.Drawing.Size(691, 35);
             this.txt_complex.TabIndex = 11;
             this.txt_complex.TextChanged += new System.EventHandler(this.txt_complex_TextChanged);
             this.txt_complex.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Calc_KeyPress);
@@ -127,10 +135,10 @@
             // lbl_Z
             // 
             this.lbl_Z.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Z.Location = new System.Drawing.Point(13, 71);
+            this.lbl_Z.Location = new System.Drawing.Point(15, 89);
             this.lbl_Z.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Z.Name = "lbl_Z";
-            this.lbl_Z.Size = new System.Drawing.Size(52, 31);
+            this.lbl_Z.Size = new System.Drawing.Size(54, 39);
             this.lbl_Z.TabIndex = 12;
             this.lbl_Z.Text = "Z =";
             this.lbl_Z.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,10 +146,10 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 119);
+            this.label1.Location = new System.Drawing.Point(14, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 31);
+            this.label1.Size = new System.Drawing.Size(164, 39);
             this.label1.TabIndex = 13;
             this.label1.Text = "Kartesisch =";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -149,10 +157,10 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 150);
+            this.label2.Location = new System.Drawing.Point(13, 94);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 31);
+            this.label2.Size = new System.Drawing.Size(164, 39);
             this.label2.TabIndex = 14;
             this.label2.Text = "Polar =";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -160,10 +168,10 @@
             // lbl_expo
             // 
             this.lbl_expo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_expo.Location = new System.Drawing.Point(13, 181);
+            this.lbl_expo.Location = new System.Drawing.Point(13, 132);
             this.lbl_expo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_expo.Name = "lbl_expo";
-            this.lbl_expo.Size = new System.Drawing.Size(146, 31);
+            this.lbl_expo.Size = new System.Drawing.Size(164, 39);
             this.lbl_expo.TabIndex = 15;
             this.lbl_expo.Text = "Exponential =";
             this.lbl_expo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -171,55 +179,135 @@
             // lbl_cartesian
             // 
             this.lbl_cartesian.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cartesian.Location = new System.Drawing.Point(169, 119);
+            this.lbl_cartesian.Location = new System.Drawing.Point(183, 17);
             this.lbl_cartesian.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_cartesian.Name = "lbl_cartesian";
-            this.lbl_cartesian.Size = new System.Drawing.Size(508, 31);
+            this.lbl_cartesian.Size = new System.Drawing.Size(577, 39);
             this.lbl_cartesian.TabIndex = 16;
             this.lbl_cartesian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_polar
             // 
             this.lbl_polar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_polar.Location = new System.Drawing.Point(164, 150);
+            this.lbl_polar.Location = new System.Drawing.Point(182, 94);
             this.lbl_polar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_polar.Name = "lbl_polar";
-            this.lbl_polar.Size = new System.Drawing.Size(513, 31);
+            this.lbl_polar.Size = new System.Drawing.Size(577, 39);
             this.lbl_polar.TabIndex = 17;
             this.lbl_polar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_exponential
             // 
             this.lbl_exponential.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_exponential.Location = new System.Drawing.Point(164, 181);
+            this.lbl_exponential.Location = new System.Drawing.Point(182, 132);
             this.lbl_exponential.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_exponential.Name = "lbl_exponential";
-            this.lbl_exponential.Size = new System.Drawing.Size(513, 31);
+            this.lbl_exponential.Size = new System.Drawing.Size(577, 39);
             this.lbl_exponential.TabIndex = 18;
             this.lbl_exponential.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lbl_absolute
+            // 
+            this.lbl_absolute.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_absolute.Location = new System.Drawing.Point(182, 171);
+            this.lbl_absolute.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_absolute.Name = "lbl_absolute";
+            this.lbl_absolute.Size = new System.Drawing.Size(577, 39);
+            this.lbl_absolute.TabIndex = 20;
+            this.lbl_absolute.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(13, 171);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 39);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Betrag =";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_phi
+            // 
+            this.lbl_phi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_phi.Location = new System.Drawing.Point(184, 213);
+            this.lbl_phi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_phi.Name = "lbl_phi";
+            this.lbl_phi.Size = new System.Drawing.Size(577, 39);
+            this.lbl_phi.TabIndex = 22;
+            this.lbl_phi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(15, 213);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(164, 39);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Phi =";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_conjugate
+            // 
+            this.lbl_conjugate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_conjugate.Location = new System.Drawing.Point(183, 56);
+            this.lbl_conjugate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_conjugate.Name = "lbl_conjugate";
+            this.lbl_conjugate.Size = new System.Drawing.Size(577, 39);
+            this.lbl_conjugate.TabIndex = 24;
+            this.lbl_conjugate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(14, 56);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(164, 39);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Konjugiert =";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pnl_info
+            // 
+            this.pnl_info.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_info.Controls.Add(this.lbl_exponential);
+            this.pnl_info.Controls.Add(this.lbl_conjugate);
+            this.pnl_info.Controls.Add(this.label1);
+            this.pnl_info.Controls.Add(this.label5);
+            this.pnl_info.Controls.Add(this.label2);
+            this.pnl_info.Controls.Add(this.lbl_phi);
+            this.pnl_info.Controls.Add(this.lbl_expo);
+            this.pnl_info.Controls.Add(this.label6);
+            this.pnl_info.Controls.Add(this.lbl_cartesian);
+            this.pnl_info.Controls.Add(this.lbl_absolute);
+            this.pnl_info.Controls.Add(this.lbl_polar);
+            this.pnl_info.Controls.Add(this.label4);
+            this.pnl_info.Location = new System.Drawing.Point(0, 133);
+            this.pnl_info.Name = "pnl_info";
+            this.pnl_info.Size = new System.Drawing.Size(780, 262);
+            this.pnl_info.TabIndex = 25;
+            // 
             // Calc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 522);
-            this.Controls.Add(this.lbl_exponential);
-            this.Controls.Add(this.lbl_polar);
-            this.Controls.Add(this.lbl_cartesian);
-            this.Controls.Add(this.lbl_expo);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(780, 652);
+            this.Controls.Add(this.pnl_info);
             this.Controls.Add(this.txt_complex);
             this.Controls.Add(this.lbl_Z);
             this.Controls.Add(this.pnl_Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(693, 522);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(780, 652);
             this.Name = "Calc";
             this.Text = "Taschenrechner";
             this.pnl_Header.ResumeLayout(false);
             this.pnl_Header.PerformLayout();
             this.pnl_btnsHeader.ResumeLayout(false);
+            this.pnl_info.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,6 +328,13 @@
         private System.Windows.Forms.Label lbl_cartesian;
         private System.Windows.Forms.Label lbl_polar;
         private System.Windows.Forms.Label lbl_exponential;
+        private System.Windows.Forms.Label lbl_absolute;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_phi;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_conjugate;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel pnl_info;
     }
 }
 

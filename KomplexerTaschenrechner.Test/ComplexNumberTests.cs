@@ -18,6 +18,15 @@ namespace KomplexerTaschenrechner.Test
         }
 
         [Test]
+        [TestCase("2+5i", "2-5i")]
+        [TestCase("2-5i", "2+5i")]
+        public void Conjugatetest(string cartesian, string conjugate)
+        {
+            ComplexNumber cN = ComplexNumber.Input(cartesian);
+            Assert.AreEqual(conjugate, cN.Conjugate());
+        }
+
+        [Test]
         [TestCase("2+5i", 2, 5, 5.385, 68.199)]
         [TestCase("-5+3i", -5, 3, 5.831, 149.036)]
         [TestCase("5-8i", 5, -8, 9.434, 302.005)]
