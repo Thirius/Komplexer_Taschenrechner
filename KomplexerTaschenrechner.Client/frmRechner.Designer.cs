@@ -48,9 +48,23 @@
             this.lbl_conjugate = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pnl_info = new System.Windows.Forms.Panel();
+            this.btn_info = new System.Windows.Forms.Button();
+            this.btn_calc = new System.Windows.Forms.Button();
+            this.pnl_calc = new System.Windows.Forms.Panel();
+            this.txt_number1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_number2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lbl_result = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnl_Header.SuspendLayout();
             this.pnl_btnsHeader.SuspendLayout();
             this.pnl_info.SuspendLayout();
+            this.pnl_calc.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Header
@@ -124,7 +138,7 @@
             // txt_complex
             // 
             this.txt_complex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_complex.Location = new System.Drawing.Point(70, 90);
+            this.txt_complex.Location = new System.Drawing.Point(68, 27);
             this.txt_complex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_complex.Name = "txt_complex";
             this.txt_complex.Size = new System.Drawing.Size(691, 35);
@@ -135,18 +149,18 @@
             // lbl_Z
             // 
             this.lbl_Z.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Z.Location = new System.Drawing.Point(15, 89);
+            this.lbl_Z.Location = new System.Drawing.Point(13, 26);
             this.lbl_Z.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Z.Name = "lbl_Z";
             this.lbl_Z.Size = new System.Drawing.Size(54, 39);
             this.lbl_Z.TabIndex = 12;
             this.lbl_Z.Text = "Z =";
-            this.lbl_Z.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_Z.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 17);
+            this.label1.Location = new System.Drawing.Point(14, 88);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(164, 39);
@@ -157,7 +171,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 94);
+            this.label2.Location = new System.Drawing.Point(13, 165);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 39);
@@ -168,7 +182,7 @@
             // lbl_expo
             // 
             this.lbl_expo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_expo.Location = new System.Drawing.Point(13, 132);
+            this.lbl_expo.Location = new System.Drawing.Point(13, 203);
             this.lbl_expo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_expo.Name = "lbl_expo";
             this.lbl_expo.Size = new System.Drawing.Size(164, 39);
@@ -179,7 +193,7 @@
             // lbl_cartesian
             // 
             this.lbl_cartesian.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cartesian.Location = new System.Drawing.Point(183, 17);
+            this.lbl_cartesian.Location = new System.Drawing.Point(183, 88);
             this.lbl_cartesian.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_cartesian.Name = "lbl_cartesian";
             this.lbl_cartesian.Size = new System.Drawing.Size(577, 39);
@@ -189,7 +203,7 @@
             // lbl_polar
             // 
             this.lbl_polar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_polar.Location = new System.Drawing.Point(182, 94);
+            this.lbl_polar.Location = new System.Drawing.Point(182, 165);
             this.lbl_polar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_polar.Name = "lbl_polar";
             this.lbl_polar.Size = new System.Drawing.Size(577, 39);
@@ -199,7 +213,7 @@
             // lbl_exponential
             // 
             this.lbl_exponential.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_exponential.Location = new System.Drawing.Point(182, 132);
+            this.lbl_exponential.Location = new System.Drawing.Point(182, 203);
             this.lbl_exponential.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_exponential.Name = "lbl_exponential";
             this.lbl_exponential.Size = new System.Drawing.Size(577, 39);
@@ -209,7 +223,7 @@
             // lbl_absolute
             // 
             this.lbl_absolute.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_absolute.Location = new System.Drawing.Point(182, 171);
+            this.lbl_absolute.Location = new System.Drawing.Point(182, 242);
             this.lbl_absolute.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_absolute.Name = "lbl_absolute";
             this.lbl_absolute.Size = new System.Drawing.Size(577, 39);
@@ -219,7 +233,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 171);
+            this.label4.Location = new System.Drawing.Point(13, 242);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(164, 39);
@@ -230,7 +244,7 @@
             // lbl_phi
             // 
             this.lbl_phi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_phi.Location = new System.Drawing.Point(184, 213);
+            this.lbl_phi.Location = new System.Drawing.Point(184, 284);
             this.lbl_phi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_phi.Name = "lbl_phi";
             this.lbl_phi.Size = new System.Drawing.Size(577, 39);
@@ -240,7 +254,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 213);
+            this.label6.Location = new System.Drawing.Point(15, 284);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(164, 39);
@@ -251,7 +265,7 @@
             // lbl_conjugate
             // 
             this.lbl_conjugate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_conjugate.Location = new System.Drawing.Point(183, 56);
+            this.lbl_conjugate.Location = new System.Drawing.Point(183, 127);
             this.lbl_conjugate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_conjugate.Name = "lbl_conjugate";
             this.lbl_conjugate.Size = new System.Drawing.Size(577, 39);
@@ -261,7 +275,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 56);
+            this.label5.Location = new System.Drawing.Point(14, 127);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(164, 39);
@@ -276,6 +290,8 @@
             this.pnl_info.Controls.Add(this.lbl_exponential);
             this.pnl_info.Controls.Add(this.lbl_conjugate);
             this.pnl_info.Controls.Add(this.label1);
+            this.pnl_info.Controls.Add(this.txt_complex);
+            this.pnl_info.Controls.Add(this.lbl_Z);
             this.pnl_info.Controls.Add(this.label5);
             this.pnl_info.Controls.Add(this.label2);
             this.pnl_info.Controls.Add(this.lbl_phi);
@@ -285,31 +301,179 @@
             this.pnl_info.Controls.Add(this.lbl_absolute);
             this.pnl_info.Controls.Add(this.lbl_polar);
             this.pnl_info.Controls.Add(this.label4);
-            this.pnl_info.Location = new System.Drawing.Point(0, 133);
+            this.pnl_info.Location = new System.Drawing.Point(0, 45);
             this.pnl_info.Name = "pnl_info";
-            this.pnl_info.Size = new System.Drawing.Size(780, 262);
+            this.pnl_info.Size = new System.Drawing.Size(780, 350);
             this.pnl_info.TabIndex = 25;
+            // 
+            // btn_info
+            // 
+            this.btn_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_info.Location = new System.Drawing.Point(18, 414);
+            this.btn_info.Name = "btn_info";
+            this.btn_info.Size = new System.Drawing.Size(191, 50);
+            this.btn_info.TabIndex = 26;
+            this.btn_info.Text = "Info";
+            this.btn_info.UseVisualStyleBackColor = true;
+            this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
+            // 
+            // btn_calc
+            // 
+            this.btn_calc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_calc.Location = new System.Drawing.Point(568, 414);
+            this.btn_calc.Name = "btn_calc";
+            this.btn_calc.Size = new System.Drawing.Size(191, 50);
+            this.btn_calc.TabIndex = 27;
+            this.btn_calc.Text = "Berechnung";
+            this.btn_calc.UseVisualStyleBackColor = true;
+            this.btn_calc.Click += new System.EventHandler(this.btn_calc_Click);
+            // 
+            // pnl_calc
+            // 
+            this.pnl_calc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_calc.Controls.Add(this.lbl_result);
+            this.pnl_calc.Controls.Add(this.label8);
+            this.pnl_calc.Controls.Add(this.button2);
+            this.pnl_calc.Controls.Add(this.button1);
+            this.pnl_calc.Controls.Add(this.button4);
+            this.pnl_calc.Controls.Add(this.button3);
+            this.pnl_calc.Controls.Add(this.txt_number2);
+            this.pnl_calc.Controls.Add(this.label3);
+            this.pnl_calc.Controls.Add(this.txt_number1);
+            this.pnl_calc.Controls.Add(this.label9);
+            this.pnl_calc.Location = new System.Drawing.Point(0, 45);
+            this.pnl_calc.Name = "pnl_calc";
+            this.pnl_calc.Size = new System.Drawing.Size(780, 350);
+            this.pnl_calc.TabIndex = 26;
+            // 
+            // txt_number1
+            // 
+            this.txt_number1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_number1.Location = new System.Drawing.Point(68, 27);
+            this.txt_number1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_number1.Name = "txt_number1";
+            this.txt_number1.Size = new System.Drawing.Size(691, 35);
+            this.txt_number1.TabIndex = 11;
+            this.txt_number1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Calc_KeyPress);
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(13, 26);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 39);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Z =";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txt_number2
+            // 
+            this.txt_number2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_number2.Location = new System.Drawing.Point(68, 76);
+            this.txt_number2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_number2.Name = "txt_number2";
+            this.txt_number2.Size = new System.Drawing.Size(691, 35);
+            this.txt_number2.TabIndex = 13;
+            this.txt_number2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Calc_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(0, 75);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 39);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Z2 =";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(600, 127);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(159, 50);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "÷";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(419, 127);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(159, 50);
+            this.button4.TabIndex = 30;
+            this.button4.Text = "×";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(242, 127);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 50);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "-";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(68, 127);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(159, 50);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "+";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // lbl_result
+            // 
+            this.lbl_result.BackColor = System.Drawing.Color.White;
+            this.lbl_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_result.Location = new System.Drawing.Point(148, 204);
+            this.lbl_result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_result.Name = "lbl_result";
+            this.lbl_result.Size = new System.Drawing.Size(611, 39);
+            this.lbl_result.TabIndex = 34;
+            this.lbl_result.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(0, 204);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(140, 39);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "Ergebnis =";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Calc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 652);
+            this.ClientSize = new System.Drawing.Size(780, 480);
+            this.Controls.Add(this.pnl_calc);
+            this.Controls.Add(this.btn_calc);
+            this.Controls.Add(this.btn_info);
             this.Controls.Add(this.pnl_info);
-            this.Controls.Add(this.txt_complex);
-            this.Controls.Add(this.lbl_Z);
             this.Controls.Add(this.pnl_Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MinimumSize = new System.Drawing.Size(780, 652);
+            this.MinimumSize = new System.Drawing.Size(780, 480);
             this.Name = "Calc";
             this.Text = "Taschenrechner";
             this.pnl_Header.ResumeLayout(false);
             this.pnl_Header.PerformLayout();
             this.pnl_btnsHeader.ResumeLayout(false);
             this.pnl_info.ResumeLayout(false);
+            this.pnl_info.PerformLayout();
+            this.pnl_calc.ResumeLayout(false);
+            this.pnl_calc.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -335,6 +499,19 @@
         private System.Windows.Forms.Label lbl_conjugate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pnl_info;
+        private System.Windows.Forms.Button btn_info;
+        private System.Windows.Forms.Button btn_calc;
+        private System.Windows.Forms.Panel pnl_calc;
+        private System.Windows.Forms.Label lbl_result;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txt_number2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_number1;
+        private System.Windows.Forms.Label label9;
     }
 }
 

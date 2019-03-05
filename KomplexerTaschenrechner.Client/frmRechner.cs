@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -28,6 +29,9 @@ namespace KomplexerTaschenrechner.Client
         public Calc()
         {
             InitializeComponent();
+
+            pnl_info.Visible=true;
+            pnl_calc.Visible=false;
         }
 
         private void btn_Min_Click(object sender, EventArgs e)
@@ -82,6 +86,38 @@ namespace KomplexerTaschenrechner.Client
             lbl_cartesian.Text = cN.Cartesian();
             lbl_exponential.Text = cN.Expo();
             lbl_polar.Text = cN.Polar();
+        }
+
+        private void btn_info_Click(object sender, EventArgs e)
+        {
+            if (pnl_info.Visible)
+                return;
+
+            pnl_calc.Visible = false;
+
+            if (lbl_result.Text != "")
+                txt_complex.Text = lbl_result.Text;
+
+            else if (txt_number1.Text != "")
+                txt_complex.Text = txt_number1.Text;
+
+            else if (txt_number2.Text != "")
+                txt_complex.Text = txt_number2.Text;
+
+            pnl_info.Visible = true;
+        }
+
+        private void btn_calc_Click(object sender, EventArgs e)
+        {
+            if (pnl_calc.Visible)
+                return;
+
+            pnl_info.Visible = false;
+
+            if (txt_complex.Text != "")
+                txt_number1.Text = txt_complex.Text;
+
+            pnl_calc.Visible = true;
         }
     }
 }
