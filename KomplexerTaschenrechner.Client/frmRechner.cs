@@ -41,7 +41,7 @@ namespace KomplexerTaschenrechner.Client
         }
 
         List<char> lnumber = new List<char>(new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ','});
-        List<char> loperator = new List<char>(new char[] { '-', '+', 'i', '^', 'e', 's', 'n', 'c', 'o', '(', ')' });
+        List<char> loperator = new List<char>(new char[] { '-', '+', '*', 'i', '^', 'e', 's', 'n', 'c', 'o', '(', ')' });
 
         private void txt_Calc_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -64,6 +64,17 @@ namespace KomplexerTaschenrechner.Client
         private void txt_complex_TextChanged(object sender, EventArgs e)
         {
             cN = ComplexNumber.Input(txt_complex.Text);
+            if (cN == null)
+            {
+
+                lbl_cartesian.Text = "";
+                lbl_exponential.Text = "";
+                lbl_polar.Text = "";
+                return;
+            }
+            lbl_cartesian.Text = cN.Cartesian();
+            lbl_exponential.Text = cN.Expo();
+            lbl_polar.Text = cN.Polar();
         }
     }
 }
