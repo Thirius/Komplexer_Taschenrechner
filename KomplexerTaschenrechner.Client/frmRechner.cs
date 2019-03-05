@@ -25,7 +25,6 @@ namespace KomplexerTaschenrechner.Client
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-
         public Calc()
         {
             InitializeComponent();
