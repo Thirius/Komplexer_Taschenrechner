@@ -39,8 +39,8 @@ namespace KomplexerTaschenrechner
             if (C1 == null || C2 == null)
                 return null;
             ComplexNumber result = new ComplexNumber();
-            result.Real = Math.Round((C1.Real * C2.Real + C1.Imag * C2.Imag) / (Math.Pow(C2.Real, 2) + Math.Pow(C2.Imag, 2)),3);
-            result.Imag = Math.Round(((C1.Imag * C2.Real) - (C1.Real * C2.Imag)) / (Math.Pow(C2.Real, 2) + Math.Pow(C2.Imag, 2)),3);
+            result.Real = Math.Round((C1.Real * C2.Real + C1.Imag * C2.Imag) / (Math.Pow(C2.Real, 2) + Math.Pow(C2.Imag, 2)), 3);
+            result.Imag = Math.Round(((C1.Imag * C2.Real) - (C1.Real * C2.Imag)) / (Math.Pow(C2.Real, 2) + Math.Pow(C2.Imag, 2)), 3);
             return ComplexNumber.Input(result.Cartesian());
         }
 
