@@ -31,6 +31,11 @@ namespace KomplexerTaschenrechner.Client
 
             pnl_info.Visible=true;
             pnl_calc.Visible=false;
+
+            tip.SetToolTip(txt_complex, "A + bi \n'Abs'*e^'Phi'i \n'Abs'*(cos('Phi')+si('Phi')i)\n 'Abs' = Betrag ");
+            tip.SetToolTip(txt_number1, "A + bi \n'Abs'*e^'Phi'i \n'Abs'*(cos('Phi')+si('Phi')i)\n 'Abs' = Betrag ");
+            tip.SetToolTip(txt_number2, "A + bi \n'Abs'*e^'Phi'i \n'Abs'*(cos('Phi')+si('Phi')i)\n 'Abs' = Betrag ");
+
         }
 
         private void btn_Min_Click(object sender, EventArgs e)
@@ -55,11 +60,6 @@ namespace KomplexerTaschenrechner.Client
             {
                 e.Handled = true;
             }
-        }
-
-        private void tc_Calc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Ausgabe();
         }
 
         ComplexNumber cN;
@@ -114,6 +114,8 @@ namespace KomplexerTaschenrechner.Client
         {
             if (pnl_calc.Visible)
             {
+                if (lbl_result.Text == "")
+                    return;
                 txt_number1.Text = lbl_result.Text;
                 txt_number2.Text = "";
                 lbl_result.Text = "";
