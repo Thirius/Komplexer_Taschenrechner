@@ -11,6 +11,7 @@ namespace KomplexerTaschenrechner.Client
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
+        List<describeComplexNumber> listComplex = new List<describeComplexNumber>();
 
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -31,6 +32,7 @@ namespace KomplexerTaschenrechner.Client
 
             pnl_info.Visible=true;
             pnl_calc.Visible=false;
+            pnl_easyCalc.Visible = false;
 
             tip.SetToolTip(txt_complex, "A + bi \n'Abs'*e^'Phi'i \n'Abs'*(cos('Phi')+si('Phi')i)\n 'Abs' = Betrag ");
             tip.SetToolTip(txt_number1, "A + bi \n'Abs'*e^'Phi'i \n'Abs'*(cos('Phi')+si('Phi')i)\n 'Abs' = Betrag ");
@@ -63,6 +65,9 @@ namespace KomplexerTaschenrechner.Client
         }
 
         ComplexNumber cN;
+        ComplexNumber C1 = new ComplexNumber();
+        ComplexNumber C2 = new ComplexNumber();
+        bool extended = false;
 
         private void txt_complex_TextChanged(object sender, EventArgs e)
         {
@@ -89,11 +94,13 @@ namespace KomplexerTaschenrechner.Client
 
         private void btn_info_Click(object sender, EventArgs e)
         {
-            btn_calc.Text = "Berechnung";
+            btn_calc.Text = "Erweitert";
             if (pnl_info.Visible)
                 return;
 
             pnl_calc.Visible = false;
+            pnl_easyCalc.Visible = false;
+            extended = false;
 
             if (lbl_result.Text != "")
                 txt_complex.Text = lbl_result.Text;
@@ -112,6 +119,8 @@ namespace KomplexerTaschenrechner.Client
 
         private void btn_calc_Click(object sender, EventArgs e)
         {
+
+            extended = true;
             if (pnl_calc.Visible)
             {
                 if (lbl_result.Text == "")
@@ -124,41 +133,68 @@ namespace KomplexerTaschenrechner.Client
 
             btn_calc.Text = "Weiter";
             pnl_info.Visible = false;
-
+            pnl_easyCalc.Visible = false;
             if (txt_complex.Text != "")
                 txt_number1.Text = txt_complex.Text;
 
             txt_complex.Text = "";
             pnl_calc.Visible = true;
+            
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            ComplexNumber C1 = ComplexNumber.Input(txt_number1.Text);
-            ComplexNumber C2 = ComplexNumber.Input(txt_number2.Text);
-            
+            if (extended)
+            {
+                C1 = ComplexNumber.Input(txt_number1.Text);
+                C2 = ComplexNumber.Input(txt_number2.Text);
+            }
+            else
+            {
+                setEasyComplexNumbers();
+            }
+
             lbl_result.Text = ComplexCalc.Add(C1, C2)?.Cartesian();
+            txt_result2.Text = lbl_result.Text;
+
             if (lbl_result.Text == "")
                 MessageBox.Show("Fehler bei der Eingabe");
         }
 
         private void btn_subtract_Click(object sender, EventArgs e)
         {
-            ComplexNumber C1 = ComplexNumber.Input(txt_number1.Text);
-            ComplexNumber C2 = ComplexNumber.Input(txt_number2.Text);
+            if (extended)
+            {
+                C1 = ComplexNumber.Input(txt_number1.Text);
+                C2 = ComplexNumber.Input(txt_number2.Text);
+            }
+            else
+            {
+                setEasyComplexNumbers();
+            }
 
             lbl_result.Text = ComplexCalc.Subtract(C1, C2)?.Cartesian();
+            txt_result2.Text = lbl_result.Text;
+
             if (lbl_result.Text == "")
                 MessageBox.Show("Fehler bei der Eingabe");
         }
 
         private void btn_multiply_Click(object sender, EventArgs e)
         {
-            ComplexNumber C1 = ComplexNumber.Input(txt_number1.Text);
-            ComplexNumber C2 = ComplexNumber.Input(txt_number2.Text);
+            if (extended)
+            {
+                C1 = ComplexNumber.Input(txt_number1.Text);
+                C2 = ComplexNumber.Input(txt_number2.Text);
+            }
+            else
+            {
+                setEasyComplexNumbers();
+            }
 
-            
+
             lbl_result.Text = ComplexCalc.Multiply(C1, C2)?.Cartesian();
+            txt_result2.Text = lbl_result.Text;
 
             if ((C1?.Real == 0 && C1?.Imag == 0) || (C2?.Real == 0 && C2?.Imag == 0))
                 MessageBox.Show("Multiplikation nicht möglich");
@@ -168,15 +204,111 @@ namespace KomplexerTaschenrechner.Client
 
         private void btn_divide_Click(object sender, EventArgs e)
         {
-            ComplexNumber C1 = ComplexNumber.Input(txt_number1.Text);
-            ComplexNumber C2 = ComplexNumber.Input(txt_number2.Text);
+            if (extended)
+            {
+                C1 = ComplexNumber.Input(txt_number1.Text);
+                C2 = ComplexNumber.Input(txt_number2.Text);
+            }
+            else
+            {
+                setEasyComplexNumbers();
+            }
 
             lbl_result.Text = ComplexCalc.Divide(C1, C2)?.Cartesian();
+            txt_result2.Text = lbl_result.Text;
 
             if ((C1?.Real == 0 && C1?.Imag == 0) || (C2?.Real == 0 && C2?.Imag == 0))
                 MessageBox.Show("Division nicht möglich");
             else if (lbl_result.Text == "")
                 MessageBox.Show("Fehler bei der Eingabe");
         }
+
+        private void btn_easyCalc_Click(object sender, EventArgs e)
+        {
+            if (btn_easyCalc.Text == "Normal")
+            {
+                pnl_calc.Visible = false;
+                pnl_easyCalc.Visible = true;
+                pnl_info.Visible = false;
+
+                extended = false;
+                btn_calc.Text = "Erweitert";
+            }
+        }
+
+
+        
+        private void setEasyComplexNumbers()
+        {
+            double dummy;
+            double.TryParse(txt_Z1_Real.Text, out dummy);
+            C1.Real = dummy;
+            double.TryParse(txt_Z1_Imag.Text, out dummy);
+            C1.Imag = dummy;
+            C1.calcAbsolute();
+            C1.calcPhi();
+
+            double.TryParse(txt_Z2_Real.Text, out dummy);
+            C2.Real = dummy;
+            double.TryParse(txt_Z2_Imag.Text, out dummy);
+            C2.Imag = dummy;
+            C2.calcAbsolute();
+            C2.calcPhi();
+        }
+
+        private void updatecombo()
+        {
+            cb_listcombo.Items.Clear();
+            foreach (var item in listComplex)
+            {
+                cb_listcombo.Items.Add(item.Cartesian());
+            }
+        }
+        int id = 0;
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            describeComplexNumber a;
+            double dummy;
+            if ( txt_Z1_Real.Text != "" && txt_Z1_Imag.Text != "")
+            {
+                a = new describeComplexNumber(id, "");
+                double.TryParse(txt_Z1_Real.Text, out dummy);
+                a.Real = dummy;
+                double.TryParse(txt_Z1_Imag.Text, out dummy);
+                a.Imag = dummy;
+
+                a.calcPhi();
+                a.calcAbsolute();
+                id++;
+                listComplex.Add(a);
+            }
+            if (txt_Z2_Real.Text != "" && txt_Z2_Imag.Text != "")
+            {
+                a = new describeComplexNumber(id, "");
+                double.TryParse(txt_Z2_Real.Text, out dummy);
+                a.Real = dummy;
+                double.TryParse(txt_Z2_Imag.Text, out dummy);
+                a.Imag = dummy;
+                a.calcPhi();
+                a.calcAbsolute();
+                id++;
+                listComplex.Add(a);
+            }
+
+            if (txt_result2.Text !="")
+            {
+                a = new describeComplexNumber(id, "");
+                a.Real = ComplexNumber.Input(txt_result2.Text).Real;
+                a.Imag = ComplexNumber.Input(txt_result2.Text).Imag;
+
+                a.calcPhi();
+                a.calcAbsolute();
+                id++;
+                listComplex.Add(a);
+            }
+            updatecombo();
+        }
+
+
     }
 }

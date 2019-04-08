@@ -5,8 +5,6 @@ namespace KomplexerTaschenrechner
 {
     public class ComplexNumber
     {
-        //double real, imag, absolute, phi;
-        
         public double Real { get; set; }
         public double Imag { get; set; }
         public double Phi { get; set; }
